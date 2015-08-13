@@ -25,11 +25,13 @@ AMD的设计理念是在浏览器或者服务器中**异步加载模块化的代
 `Require.js`有一个活跃的社区(community)，而且他成长很迅速。[James Burke](http://tagneto.blogspot.com/)，也就是Require.js的作者，已经全身投入到Require.js且不断等待用户的feedback。他是脚本加载的专家，也是AMD规范的contributor(贡献者)。
 
 ## 开始吧
-为了理解这个教程，你应该直接跳到这个例子，看看他大概是怎样子的。[Code on GitHub](https://github.com/thomasdavis/backbonetutorials/tree/gh-pages/examples/modular-backbone)，[Demo Online](http://thomasdavis.github.io/backbonetutorials/examples/modular-backbone)
+为了理解这个教程，你应该直接跳到这个例子，看看他大概是怎样子的。
+- [Code on GitHub](https://github.com/thomasdavis/backbonetutorials/tree/gh-pages/examples/modular-backbone)
+- [Demo Online](http://thomasdavis.github.io/backbonetutorials/examples/modular-backbone)
 
 这个教程是很松散的，所以你需要上面的例子来帮助你理解。
 
-这个例子不是很生动，但是可以给你一个模糊的印象。
+这个例子不是很生动，但是可以给你一个大概的印象。
 
 ## 文件结构
 根据项目大小和类型，文件目录的安排有很多种方法。在下面的例子中，`views`和`templates`的目录结构是相似的。`Collections`和`Model`的结构就有点像ORM。
@@ -87,6 +89,8 @@ AMD的设计理念是在浏览器或者服务器中**异步加载模块化的代
 **Note**: `data-main`这个attribute会告诉Require.js去加载位于`js/mian.js`的脚本。他自动在后面补上`.js`后缀。
 
 ```html
+<!-- index.html -->
+
 <!doctype html>
 <html>
 <head>
@@ -135,14 +139,14 @@ require([
 ```
 
 ## 我们应该怎么编排(lay out)我们的外部脚本?
-任何我们对我们web应用开发的脚本都会使用AMD/Require.js来异步加载。
+我们开发web应用的所用到的模块都会使用AMD/Require.js来异步加载。
 
-我们已经加载了jQuery, Underscore以及Backbone。但是很不幸的是，这些library都会同步加载，并且都在全局命名空间(gloable namespace中，且相互依赖)。
+我们已经加载了jQuery, Underscore以及Backbone。但是很不幸的是，这些library都会同步加载，并且都在全局命名空间(gloable namespace)中，且相互依赖。
 
 ## 一个叫'boiler plate'的模块
-在我们开始开发我们的应用之前，让我们快速看一遍我们将会经常用到的代码(boiler plate code)。
+在我们开始构建我们的应用之前，让我们快速看一遍我们将会经常用到的代码(boiler plate code)。
 
-为了方便，我都会保存一个`boilerplate.js`的文件在我的项目根目录中，所以我可以复制粘贴。
+为了方便，我都会保存一个叫`boilerplate.js`的文件在我的项目根目录中，所以我可以复制粘贴。
 
 ```javascript
 // boilerplate.js
@@ -160,7 +164,7 @@ define([
 `define()`函数的第一个参数是一个数组，里面放的是我们所需要依赖的模块。
 
 ## App.js构建我们应用的主要模块
-我们应用的主要模块应该尽量保持轻量。这个教程只是建立了一个Backbone Router，以及初始化他。
+我们应用的主要模块(`app.js`)应该尽量保持轻量。这个教程只是建立了一个Backbone Router，以及初始化他。
 
 ```javascript
 // app.js
@@ -224,7 +228,7 @@ define([
 ```
 
 ## 模块化的Backbone View
-Backbone views会经常和DOM交互。用了新的模块系统，我们就可以加载JavaScript templates，用`Require.js text!`这个插件(plug-in);
+Backbone views会经常和DOM交互。用了新的模块系统，即是`Require.js text!`这个插件(plug-in)，我们就可以加载JavaScript templates，
 
 ```javascript
 // views/projects/list
@@ -251,7 +255,7 @@ define([
 JavaScript模版引擎可以让我们分离界面(design)和逻辑(logic)，通过把我们所有的HTML都放在template文件夹里。
 
 ## 模块化Colletion, Model以及View
-现在就我们把Model, Collection以及View串连起来吧，这也是构建Backbone View的一个常用场景。
+现在就让我们把Model, Collection以及View串连起来吧，这也是构建Backbone View的一个常用场景。
 
 首先，我们会定义一个model:
 ```javascript
@@ -290,6 +294,8 @@ define([
 
 现在，我们就可以把collection注入到我们的template。
 ```javascript
+// views/projects/list
+
 define([
   'jquery', // lib/jquery/jquery
   'underscore',

@@ -31,7 +31,7 @@ Backbone routers是用来route我们应用的URL，当使用hash tags(`#`)的时
 ```
 
 ## 动态的routing
-大多数框架都会允许你在定义route的时候，可以混合静态和动态的route paramters。比如说，你也会想使用一个比较友好的URL string去获取你的post，通过一个post id变量，就像这样: `http://example.com/#/posts/12`。一旦route被激活之后，你就想通过URL string来访问post的`id`。
+大多数框架都会允许你在定义route的时候，可以混合静态和动态的route paramters。比如说，你也会想使用一个比较友好的URL string去获取你的post，通过一个post id变量，就像这样: `http://example.com/#/posts/12`。一旦route被激活之后，你就想通过URL string来获取post的`id`。
 
 ```javascript
 var AppRouter = Backbone.Router.extend({
@@ -51,7 +51,7 @@ app_router.on('route:getPost', function(id) {
 });
 
 app_router.on('route:defaultRoute', function(action) {
-  alert('actions');
+  alert(actions);
 });
 
 Backbone.history.start();
@@ -61,7 +61,7 @@ Backbone.history.start();
 <a href="#/posts/120"> Post 120 </a>
 ```
 
-## 动态的routing cont. `:params` and `*splats`
+## 动态的routing参数. `:params` and `*splats`
 Backbone在实现routes的时候有2种变量风格。第一种就是`:params`，他会匹配在slashs(`/`)中的所有URL components。然后，`splats`风格会匹配任何数量的URL components。因为是`splat`，所以自然而然他总是你URL的最后一个变量，因此他总是会匹配所有的components。
 
 ```javascript

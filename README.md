@@ -5,11 +5,12 @@
 
 ## TOC
 - [ch1 - Why Backbone](./ch1.md)
-- [ch2 - What is a View](./ch2.md)
-- [ch3 - What is a Model](./ch3.md)
-- [ch4 - What is a collection](./ch4.md)
-- [ch5 - What is a router](./ch5.md)
-- updating
+- [ch2 - View是什么](./ch2.md)
+- [ch3 - Model是什么](./ch3.md)
+- [ch4 - 什么是Collection](./ch4.md)
+- [ch5 - 什么是Router](./ch5.md)
+- [ch6 -  用require.js模块化你的代码](./ch6.md)
+- [ch7 - 使用Twitter API实现一个的简单的infinite Scrolling](./ch7.md)
 
 ## About Origin
 - Official Site: http://backbonetutorials.com/
