@@ -1,7 +1,7 @@
 # Backbone-tutorial-translation
 [backbone tutorial](https://leanpub.com/backbonetutorials)中文翻译~  
 
-You can also read the origin(English) : https://cdnjs.com/libraries/backbone.js/tutorials
+**Why not read the origin(English) tutorial**: https://cdnjs.com/libraries/backbone.js/tutorials
 
 ## TOC
 - [ch1 - Why Backbone](./ch1.md)
