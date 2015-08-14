@@ -112,10 +112,10 @@ define([
 ```html
 <ul class="tweets">
 <% _.each(tweets, function(tweet) {
-  <li> <%= tweet.get('text') &> </li>
-<% }); &>
+  <li> <%= tweet.get('text') %> </li>
+<% }); %>
 </ul>
 ```
 
 ## 总结
-这个是很简单但是有很完整的infinite scroll。但在是UI/ux中使用这个效果是需要注意的。
+这个是很简单但是又很完整的infinite scroll。但在UI/ux中使用这个效果是需要注意的。

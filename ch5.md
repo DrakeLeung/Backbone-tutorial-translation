@@ -1,7 +1,9 @@
-# 什么是一个router?
-Backbone routers是用来route我们应用的URL，当使用hash tags(`#`)的时候。在传统的MVC观念中，这个在语义上(semantics)是不符合的。并且，如果你阅读了[什么是view?]()的话，那篇文章也阐述了这个观点。尽管如此，Backbone的'router'对于许多需要URL routing/history capabilites的应用来说，他是十分有用的。
+**原文链接: https://cdnjs.com/libraries/backbone.js/tutorials/what-is-a-router**
 
-定义过的routers应该总是包含了至少一个route，以及映射到(map)这个route的函数。在下面的例子中，我们将会定义一个总是被调用的route。
+# 什么是一个router?
+Backbone的router是用来route我们web应用的URL，当使用hash tags(`#`)的时候。在传统的MVC观念中，这个在语义上(semantics)是不符合的。并且，如果你阅读了[什么是view?]()的话，那篇文章也阐述了这个观点。尽管如此，Backbone的'router'对于许多需要URL routing/history capabilites的应用来说，他是十分有用的。
+
+定义过的routers应该包含了至少一个route，以及映射到(map)这个route的函数。在下面的例子中，我们将会定义一个总是被调用的route。
 
 同样需要注意的是，route会解释(interpret)在URL中`#`tag后面的所有东西。在你应用中所有的链接都应该像这样: `#/action`或者`#action`。(在hash tag后面加上个forward slash(`/`)似乎好看一点, `http://example.com/#/user/help`)
 
@@ -94,3 +96,5 @@ Routes是很强大的，但是在理想情况下你的应用不应该包含太�
 ## 相关链接
 - [Backbone.js official router docs](http://documentcloud.github.io/backbone/#Router)
 - [Using routes and understanding the hash tag](http://thomasdavis.github.io/2011/02/07/making-a-restful-ajax-app.html)
+
+**原文链接: https://cdnjs.com/libraries/backbone.js/tutorials/what-is-a-router**

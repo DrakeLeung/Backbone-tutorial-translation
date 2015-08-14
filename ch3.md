@@ -1,3 +1,5 @@
+**原文链接:https://cdnjs.com/libraries/backbone.js/tutorials/what-is-a-model**
+
 # 什么是model?
 由于网络上关于[MVC]()的定义十分混乱，所以很难准确地告诉你究竟什么是*model*。Backbone.js的作者有一个很清晰的定义，对于Backbone.js里面的model。
 
@@ -39,7 +41,7 @@ person.set({
 所以，传一个JavaScript对象给我们的constructor跟调用`model.set()`是一样的。现在这些model都设置了attributes，所以我们可以获取(retrieve)他们。
 
 ## Getting attributes
-使用`model.get()`方法，我们可以在任何时候访问model的properties。
+使用`model.get()`方法，我们可以在任何时候访问model的attributes。
 ```javascript
 var Person = Backbone.Model.extend({
   initialize: function() {
@@ -57,7 +59,7 @@ var name = person.get('name'); // 'Thomas'
 ```
 
 ## Setting Model Defaults
-有时候，你会想你的model包含默认值。这是很容易实现的，只要你在model declaration的时候设置一个`defaults` property。
+有时候，你会想你的model包含默认值。这是很容易实现的，只要你在model declaration的时候设置一个`defaults` attribute。
 ```javascript
 var Person = Backbone.Model.extend({
   defaults: {
@@ -135,7 +137,7 @@ person.set({
   name: 'Stewie Griffin'
 });
 ```
-综上，我们可以给单独的一个attribute绑定change listener，也可以给所有attributes绑定。像这样：
+我们不仅可以给单独的一个attribute绑定change listener，也可以给所有attributes绑定。像这样：
 ```javascript
 this.on('change', function(model) {
   // 只要model随便一个attribute改变，都会调用这个函数
@@ -143,7 +145,7 @@ this.on('change', function(model) {
 ```
 
 ## 和服务器交互
-models其实代表这服务器的数据，以及你对数据进行的操作会被转换成RESTful operations。
+models其实代表着服务器的数据，以及你对数据进行的操作会被转换成RESTful operations。
 
 model的`id` attribute表明了如何在数据库查找他，通常会映射到[surrogate key](https://en.wikipedia.org/wiki/Surrogate_key)。
 
@@ -297,3 +299,5 @@ person.set({
   age: -1
 });
 ```
+
+**原文链接:https://cdnjs.com/libraries/backbone.js/tutorials/what-is-a-model**

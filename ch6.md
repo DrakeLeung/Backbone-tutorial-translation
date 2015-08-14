@@ -1,3 +1,5 @@
+**原文链接:https://cdnjs.com/libraries/backbone.js/tutorials/organizing-backbone-using-modules**
+
 # 用require.js模块化你的代码
 很遗憾，Backbone.js并没有告诉你如何组织你的代码，因此会让许多开发者陷入如何加载脚本(load scripts)和搭建他们的开发环境的黑暗中。
 
@@ -326,3 +328,6 @@ define([
 
 ## 相关链接
 - [Organizing Your Backbone.js Application With Modules](http://bocoup.com/weblog/organizing-your-backbone-js-application-with-modules/)
+
+
+**原文链接:https://cdnjs.com/libraries/backbone.js/tutorials/organizing-backbone-using-modules**
